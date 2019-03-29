@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class SortComplexity {
     public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         int length;
@@ -17,11 +18,11 @@ public class SortComplexity {
         length = scanner.nextInt();
 
         for (int i = 0; i < amount; i++) {
-             currentTime = sortRandomArray(length);
+            currentTime = sortRandomArray(length);
 
-            System.out.println("Laufzeit zur Sortierung des "+i+". Arrays: "+ currentTime);
+            System.out.println("Laufzeit zur Sortierung des " + i + ". Arrays: " + currentTime);
 
-             sysTime += currentTime;
+            sysTime += currentTime;
         }
         sysTime /= amount;
 
@@ -48,7 +49,7 @@ public class SortComplexity {
         int[] array = new int[length];
 
         for (int i = 0; i < length; i++) {
-            array[i] = (int)(1 + (Math.random() * (0 + 100)));
+            array[i] = (int) (1 + (Math.random() * (0 + 100)));
         }
 
         return array;
@@ -61,7 +62,7 @@ public class SortComplexity {
         for (int i = 1; i < array.length; i++) {
             h = array[i];
             int j = i;
-            while (j > 0 && array[j - 1] > h){
+            while (j > 0 && array[j - 1] > h) {
                 array[j] = array[j - 1];
                 j--;
             }
