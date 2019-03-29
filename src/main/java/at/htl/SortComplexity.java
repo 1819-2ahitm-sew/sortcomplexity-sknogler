@@ -11,7 +11,6 @@ public class SortComplexity {
         long sysTime = 0;
         long currentTime = 0;
 
-
         System.out.printf("Anzahlt der zu sortierenden: ");
         amount = scanner.nextInt();
         System.out.printf("Größe der Arrays: ");
