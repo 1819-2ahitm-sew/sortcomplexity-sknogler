@@ -20,7 +20,7 @@ public class SortComplexity {
         for (int i = 0; i < amount; i++) {
             currentTime = sortRandomArray(length);
 
-            System.out.println("Laufzeit zur Sortierung des " + i + ". Arrays: " + currentTime);
+            System.out.println("Laufzeit zur Sortierung des " + (i+1) + ". Arrays: " + currentTime);
 
             sysTime += currentTime;
         }
@@ -57,21 +57,22 @@ public class SortComplexity {
 
     // Sorts an array of numbers in ascending order
     public static void sort(int[] array) {
-        int h;
 
         for (int i = 1; i < array.length; i++) {
-            h = array[i];
-            int j = i;
-            while (j > 0 && array[j - 1] > h) {
-                array[j] = array[j - 1];
-                j--;
+            for (int j = 0; j < array.length-1; j++) {
+                if (array[j] > array[j+1]){
+                    swap(array, i, j);
+                }
             }
-            array[j] = h;
         }
     }
 
     // Swaps the array elements with index i and j
     public static void swap(int[] array, int i, int j) {
+        int h;
 
+        h = array[j];
+        array[j] = array[j+1];
+        array[j+1] = h;
     }
 }
