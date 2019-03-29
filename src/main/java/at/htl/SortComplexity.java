@@ -39,7 +39,6 @@ public class SortComplexity {
 
         long sysTime = after - before;
 
-
         return sysTime;
     }
 
@@ -51,7 +50,6 @@ public class SortComplexity {
         for (int i = 0; i < length; i++) {
             array[i] = (int) (1 + (Math.random() * (0 + 100)));
         }
-
         return array;
     }
 
